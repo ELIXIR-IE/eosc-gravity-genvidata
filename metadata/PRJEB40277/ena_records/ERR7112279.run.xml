@@ -1,0 +1,89 @@
+<RUN_SET>
+<RUN accession="ERR7112279" alias="ena-RUN-NVRL-18-10-2021-10:15:17:151-2" broker_name="Interinstitutional project for the sequencing of circulating SARS-CoV-2 strains in the population of the Republic of Ireland during the 2020 pandemic of COVID19" center_name="Irish Consortium for Sequencing Covid">
+  <IDENTIFIERS>
+    <PRIMARY_ID>ERR7112279</PRIMARY_ID>
+    <SUBMITTER_ID namespace="Irish Consortium for Sequencing Covid">ena-RUN-NVRL-18-10-2021-10:15:17:151-2</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <TITLE>MinION sequencing</TITLE>
+  <EXPERIMENT_REF accession="ERX6681205">
+    <IDENTIFIERS>
+      <PRIMARY_ID>ERX6681205</PRIMARY_ID>
+    </IDENTIFIERS>
+  </EXPERIMENT_REF>
+  <SPOT_DESCRIPTOR>
+    <SPOT_DECODE_SPEC>
+      <READ_SPEC>
+        <READ_INDEX>0</READ_INDEX>
+        <READ_LABEL>F1</READ_LABEL>
+        <READ_CLASS>Application Read</READ_CLASS>
+        <READ_TYPE>Forward</READ_TYPE>
+        <BASE_COORD>1</BASE_COORD>
+      </READ_SPEC>
+    </SPOT_DECODE_SPEC>
+  </SPOT_DESCRIPTOR>
+  <PLATFORM>
+    <OXFORD_NANOPORE>
+      <INSTRUMENT_MODEL>MinION</INSTRUMENT_MODEL>
+    </OXFORD_NANOPORE>
+  </PLATFORM>
+  <DATA_BLOCK>
+    <FILES>
+      <FILE checksum="9f93a8227fd5a90e004044df1ed1ca84" checksum_method="MD5" filename="run/ERR711/ERR7112279/M36IRL91859.fastq.gz" filetype="fastq" quality_scoring_system="phred"/>
+    </FILES>
+  </DATA_BLOCK>
+  <RUN_LINKS>
+    <RUN_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>ERA6738186</ID>
+      </XREF_LINK>
+    </RUN_LINK>
+    <RUN_LINK>
+      <XREF_LINK>
+        <DB>ENA-STUDY</DB>
+        <ID>ERP123896</ID>
+      </XREF_LINK>
+    </RUN_LINK>
+    <RUN_LINK>
+      <XREF_LINK>
+        <DB>ENA-SAMPLE</DB>
+        <ID>ERS7696215</ID>
+      </XREF_LINK>
+    </RUN_LINK>
+    <RUN_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERR7112279&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </RUN_LINK>
+    <RUN_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERR7112279&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </RUN_LINK>
+  </RUN_LINKS>
+  <RUN_ATTRIBUTES>
+    <RUN_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </RUN_ATTRIBUTE>
+    <RUN_ATTRIBUTE>
+      <TAG>ENA-FIRST-PUBLIC</TAG>
+      <VALUE>2021-10-18</VALUE>
+    </RUN_ATTRIBUTE>
+    <RUN_ATTRIBUTE>
+      <TAG>ENA-LAST-UPDATE</TAG>
+      <VALUE>2021-10-18</VALUE>
+    </RUN_ATTRIBUTE>
+    <RUN_ATTRIBUTE>
+      <TAG>ENA-BASE-COUNT</TAG>
+      <VALUE>22836099</VALUE>
+    </RUN_ATTRIBUTE>
+    <RUN_ATTRIBUTE>
+      <TAG>ENA-SPOT-COUNT</TAG>
+      <VALUE>22868</VALUE>
+    </RUN_ATTRIBUTE>
+  </RUN_ATTRIBUTES>
+</RUN>
+</RUN_SET>

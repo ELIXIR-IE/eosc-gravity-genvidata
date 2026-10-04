@@ -1,6 +1,10 @@
 # Downloaded sequence files. These are large and keep their own licence, so they are never committed.
 data/
 
+# Whole-study metadata tables (80,892 rows each). Too large for git; the files that
+# describe them are in metadata/ and are committed.
+metadata/*/full_study_tables/
+
 # Files Jupyter creates by itself
 .ipynb_checkpoints/
 

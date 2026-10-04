@@ -1,0 +1,54 @@
+<PROJECT_SET>
+<PROJECT accession="PRJEB40277" alias="ena-STUDY-UCD National Virus Reference Laboratory-09-09-2020-12:55:26:785-965" broker_name="Interinstitutional project for the sequencing of circulating SARS-CoV-2 strains in the population of the Republic of Ireland during the 2020 pandemic of COVID19" center_name="Irish Consortium for Sequencing Covid">
+  <IDENTIFIERS>
+    <PRIMARY_ID>PRJEB40277</PRIMARY_ID>
+    <SECONDARY_ID>ERP123896</SECONDARY_ID>
+    <SUBMITTER_ID namespace="Irish Consortium for Sequencing Covid">ena-STUDY-UCD National Virus Reference Laboratory-09-09-2020-12:55:26:785-965</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <NAME>Irish Coronavirus Sequencing Consortium</NAME>
+  <TITLE>Interinstitutional effort to sequence SARS-CoV-2 circulating genomes in Ireland during the Covid-19 global pandemic.</TITLE>
+  <DESCRIPTION>This project aims to discover the genetic makeup of coronavirus (SARS-CoV-2), the virus that is causing the current pandemic of Covid-19, by looking at the DNA sequence of the virus from samples taken from Covid–positive patients throughout Ireland.  Coronaviruses can mutate or change the proteins on their surface, making it more difficult to develop an effective vaccine against them.  These mutations or changes have not been observed as much in the coronavirus causing Covid19 (SARS-CoV-2). However, it is important to keep monitoring this to ensure the coronavirus doesn’t change in such a way that makes it even more difficult to treat or vaccinate against. Additionally, by sequencing samples from all over the country, we will be able to help show how the virus is spreading in the community and also between Ireland and other countries.</DESCRIPTION>
+  <SUBMISSION_PROJECT>
+    <SEQUENCING_PROJECT/>
+  </SUBMISSION_PROJECT>
+  <RELATED_PROJECTS>
+    <RELATED_PROJECT>
+      <PARENT_PROJECT accession="PRJEB39908"/>
+    </RELATED_PROJECT>
+  </RELATED_PROJECTS>
+  <PROJECT_LINKS>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>ERA2870558</ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB40277&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB40277&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+  </PROJECT_LINKS>
+  <PROJECT_ATTRIBUTES>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-FIRST-PUBLIC</TAG>
+      <VALUE>2020-10-14</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-LAST-UPDATE</TAG>
+      <VALUE>2020-09-14</VALUE>
+    </PROJECT_ATTRIBUTE>
+  </PROJECT_ATTRIBUTES>
+</PROJECT>
+</PROJECT_SET>

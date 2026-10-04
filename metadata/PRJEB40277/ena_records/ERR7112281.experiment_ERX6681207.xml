@@ -1,0 +1,71 @@
+<EXPERIMENT_SET>
+<EXPERIMENT accession="ERX6681207" alias="ena-EXPERIMENT-NVRL-18-10-2021-10:15:17:151-4" broker_name="Interinstitutional project for the sequencing of circulating SARS-CoV-2 strains in the population of the Republic of Ireland during the 2020 pandemic of COVID19" center_name="Irish Consortium for Sequencing Covid">
+  <IDENTIFIERS>
+    <PRIMARY_ID>ERX6681207</PRIMARY_ID>
+    <SUBMITTER_ID namespace="Irish Consortium for Sequencing Covid">ena-EXPERIMENT-NVRL-18-10-2021-10:15:17:151-4</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <TITLE>MinION sequencing</TITLE>
+  <STUDY_REF accession="ERP123896">
+    <IDENTIFIERS>
+      <PRIMARY_ID>ERP123896</PRIMARY_ID>
+      <SECONDARY_ID>PRJEB40277</SECONDARY_ID>
+    </IDENTIFIERS>
+  </STUDY_REF>
+  <DESIGN>
+    <DESIGN_DESCRIPTION>hCov-19 MinION reads obtained following the Artic v3 protocol</DESIGN_DESCRIPTION>
+    <SAMPLE_DESCRIPTOR accession="ERS7696217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>ERS7696217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMEA10017993</EXTERNAL_ID>
+      </IDENTIFIERS>
+    </SAMPLE_DESCRIPTOR>
+    <LIBRARY_DESCRIPTOR>
+      <LIBRARY_NAME>M36IRL93075</LIBRARY_NAME>
+      <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+      <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+      <LIBRARY_SELECTION>unspecified</LIBRARY_SELECTION>
+      <LIBRARY_LAYOUT>
+        <SINGLE/>
+      </LIBRARY_LAYOUT>
+      <LIBRARY_CONSTRUCTION_PROTOCOL>Artic protocol version 3</LIBRARY_CONSTRUCTION_PROTOCOL>
+    </LIBRARY_DESCRIPTOR>
+  </DESIGN>
+  <PLATFORM>
+    <OXFORD_NANOPORE>
+      <INSTRUMENT_MODEL>MinION</INSTRUMENT_MODEL>
+    </OXFORD_NANOPORE>
+  </PLATFORM>
+  <EXPERIMENT_LINKS>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SAMPLE</DB>
+        <ID>ERS7696217</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>ERA6738186</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERX6681207&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERX6681207&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+  </EXPERIMENT_LINKS>
+  <EXPERIMENT_ATTRIBUTES>
+    <EXPERIMENT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </EXPERIMENT_ATTRIBUTE>
+  </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+</EXPERIMENT_SET>

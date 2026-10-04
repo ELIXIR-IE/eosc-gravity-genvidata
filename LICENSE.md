@@ -31,7 +31,11 @@ This table is filled in as the use case grows. Every row must be checked before 
 | Resource | What is reused | Licence or terms | Status |
 |---|---|---|---|
 | European Nucleotide Archive (ENA) data, EMBL-EBI | Sequence reads and their metadata, downloaded by `01_ena_download.ipynb` | [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use) and the [INSDC policy](https://www.insdc.org/policy/). An individual record may carry its own conditions. | To verify |
+| ENA study [PRJEB40277](https://www.ebi.ac.uk/ena/browser/view/PRJEB40277), Irish Coronavirus Sequencing Consortium | Five runs downloaded (ERR7112279, ERR7112281, ERR7112289, ERR7112290, ERR7112291) and the metadata of the whole study. Described in `metadata/PRJEB40277/PRJEB40277_metadata.md` | As for ENA data above. Submitted by the Irish Consortium for Sequencing Covid | To verify |
 | ENA Portal API, EMBL-EBI | The file report service, used to find the files of a record | [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use) | To verify |
+| ENA Browser API and ENA file server, EMBL-EBI | ENA's records for the study, and the sequence files | [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use) | To verify |
+| EBI Search, EMBL-EBI | The count and list of runs in the study | [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use) | To verify |
+| NCBI Sequence Read Archive, through NCBI E-utilities | A second copy of the run table for the study, used as a cross-check | [NCBI policies and disclaimers](https://www.ncbi.nlm.nih.gov/home/about/policies/) and the [E-utilities usage guidelines](https://www.ncbi.nlm.nih.gov/books/NBK25497/) | To verify |
 | Python | The programming language | [Python Software Foundation License](https://docs.python.org/3/license.html) | To verify |
 | Requests | Python package that sends the web requests | [Apache License 2.0](https://github.com/psf/requests/blob/main/LICENSE) | To verify |
 | JupyterLab | The notebook application | [BSD 3-Clause License](https://github.com/jupyterlab/jupyterlab/blob/main/LICENSE) | To verify |

@@ -1,7 +1,14 @@
 name: ls-use-case
 channels:
   - conda-forge
+  - bioconda
 dependencies:
   - python=3.12
   - jupyterlab
   - requests
+  - fastqc
+  - fastplong
+  - minimap2
+  - samtools
+  - flye
+  - nextclade

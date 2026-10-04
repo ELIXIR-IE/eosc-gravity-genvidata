@@ -1,0 +1,8 @@
+# Downloaded sequence files. These are large and keep their own licence, so they are never committed.
+data/
+
+# Files Jupyter creates by itself
+.ipynb_checkpoints/
+
+# Files Python creates by itself
+__pycache__/

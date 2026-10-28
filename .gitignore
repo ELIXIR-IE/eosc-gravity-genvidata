@@ -10,3 +10,17 @@ metadata/*/full_study_tables/
 
 # Files Python creates by itself
 __pycache__/
+
+# Internal planning notes, never committed
+info.md
+
+# Internal report figure and proposed text, never committed
+report/
+
+# final/: Galaxy's local storage, the API key and large result files are not committed
+final/galaxy_storage/
+final/galaxy_api_key.txt
+final/galaxy_invocation.txt
+final/tool_test_output.*
+final/results/**/*.bam
+final/.venv/

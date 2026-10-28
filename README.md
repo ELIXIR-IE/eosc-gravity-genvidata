@@ -2,7 +2,8 @@
 
 A life-science use case for EOSC Gravity, focused on pathogen sequence data and led by ELIXIR Ireland.
 
-**Status: work in progress.** Steps 1 to 5 exist. Step 1 has been run. Steps 2 to 5 were checked on one file and still need a full run.
+**Status: work in progress.** The notebooks (steps 1 to 5) show each step by hand. The [`final/`](final/) folder holds the
+end-to-end Galaxy workflow, which has been run on one Irish sample and three Swedish samples. Start with [`final/README.md`](final/README.md).
 
 ## Aim
 
@@ -64,13 +65,18 @@ The original content of this repository is licensed under [CC BY 4.0](https://cr
 
 [LICENSE.md](LICENSE.md) lists every reused resource. The list is filled in as the use case grows and will be checked in full before the use case is finished.
 
+## The Galaxy workflow (`final/`)
+
+[`final/`](final/) runs the whole use case as one Galaxy workflow, in a Galaxy server in Docker: Galaxy fetches the reads from ENA
+by accession, reuses the BY-COVID/IWC SARS-CoV-2 Nanopore workflows, and reports lineage, variants and an Irish-Swedish comparison.
+[`final/README.md`](final/README.md) lists what it needs and the commands to run it.
+
+Not committed, because it is large and rebuilt by the scripts: Galaxy's storage and installed tools (`final/galaxy_storage/`, about 15 GB)
+and the Python environment (`final/.venv/`). Running the commands in `final/README.md` recreates both.
+
 ## Where this is going
 
-None of this is built yet.
-
 - Deposition of a real consensus with its metadata, once the placeholders in notebook 5 are replaced with a study and sample you own.
-- A Galaxy workflow that runs the steps, with the notebooks turned into Python or Bash scripts. Some steps may use R and Bioconductor.
-- Docker, so the whole use case runs the same way on any machine.
 
 ## Questions
 

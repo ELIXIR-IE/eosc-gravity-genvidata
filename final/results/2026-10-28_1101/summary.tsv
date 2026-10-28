@@ -1,0 +1,8 @@
+accession	role	country	collection_date	pango_lineage	clade	nextclade_qc	reads_mapped	genome_covered_pct	mean_depth	variants	spike_changes
+ERR7112279	irish_sample_of_concern	Ireland	2021-09-02	AY.4	21J	good	22868	99.4	581	46	T19R T95I G142D EFR156G L452R T478K D614G P681R D950N
+SRR27033646	swedish_raw_reads	Sweden: Uppsala County	2021-07-26	AY.122	21J	mediocre	64969	98.1	665	52	T19R IHV68I R78K? D80I P82P? PV82PI A93S? G107W? Q115 Q115* L117 I119Y? EFR156G L452R T478K D614G P681R D950N
+SRR27033647	swedish_raw_reads	Sweden: Uppsala County	2021-07-24	AY.94	21J	good	51957	99.7	531	43	T19R EFR156G L452R A475 T478K D614G P681R D950N
+SRR27033648	swedish_raw_reads	Sweden: Uppsala County	2021-07-23	AY.9.2	21I	good	67632	98.9	675	35	T19R EFR156G A222V I410 L452R T478K D614G P681R D950N
+MZ846201	swedish_consensus	Sweden	2021-08-10	AY.9.2	21I	mediocre					
+MZ848129	swedish_consensus	Sweden	2021-08-10	AY.9.2	21I	good					
+OP458823	swedish_consensus	Sweden	2021-07-12	AY.122	21J	good					

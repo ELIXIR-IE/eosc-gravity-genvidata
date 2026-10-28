@@ -1,0 +1,8 @@
+accession	role	data_type	country	collection_date	file_url	md5	ena_link	portal_link
+ERR7112279	irish_sample_of_concern	raw_reads	Ireland	2021-09-02	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR711/009/ERR7112279/ERR7112279.fastq.gz	3dbd29bc69ed67195b649e5be8e9fc17	https://www.ebi.ac.uk/ena/browser/view/ERR7112279	
+SRR27033646	swedish_raw_reads	raw_reads	Sweden: Uppsala County	2021-07-26	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/046/SRR27033646/SRR27033646_1.fastq.gz	3f257a75f60b628339958af630291e7d	https://www.ebi.ac.uk/ena/browser/view/SRR27033646	
+SRR27033647	swedish_raw_reads	raw_reads	Sweden: Uppsala County	2021-07-24	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/047/SRR27033647/SRR27033647_1.fastq.gz	6b807052e809dd7e9f31f29927316e5c	https://www.ebi.ac.uk/ena/browser/view/SRR27033647	
+SRR27033648	swedish_raw_reads	raw_reads	Sweden: Uppsala County	2021-07-23	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/048/SRR27033648/SRR27033648_1.fastq.gz	49f0e558b7f5b6b1d9649459b3628549	https://www.ebi.ac.uk/ena/browser/view/SRR27033648	
+MZ846201	swedish_consensus	consensus_sequence	Sweden	2021-08-10	https://www.ebi.ac.uk/ena/browser/api/fasta/MZ846201		https://www.ebi.ac.uk/ena/browser/view/MZ846201	https://www.pathogensportal.org/sequences?db=embl-covid19&query=MZ846201
+MZ848129	swedish_consensus	consensus_sequence	Sweden	2021-08-10	https://www.ebi.ac.uk/ena/browser/api/fasta/MZ848129		https://www.ebi.ac.uk/ena/browser/view/MZ848129	https://www.pathogensportal.org/sequences?db=embl-covid19&query=MZ848129
+OP458823	swedish_consensus	consensus_sequence	Sweden	2021-07-12	https://www.ebi.ac.uk/ena/browser/api/fasta/OP458823		https://www.ebi.ac.uk/ena/browser/view/OP458823	https://www.pathogensportal.org/sequences?db=embl-covid19&query=OP458823

@@ -1,0 +1,162 @@
+# Tools for workflow/genvidata.gxwf.yml: every Tool Shed repository used by the two IWC workflows,
+# at the exact revisions they pin, plus nextclade, snp_dists and text_processing (tp_cat).
+tools:
+- name: bcftools_annotate
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 403553ae19f6
+- name: bcftools_consensus
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - b75e49f360de
+- name: bedtools
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - a68aa6c1204a
+  - d57471728f7b
+- name: collapse_collections
+  owner: nml
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 90981f86000f
+- name: column_maker
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 02026300aa45
+  - 9bc5cdefb090
+- name: compose_text_param
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - e188c9826e0f
+- name: concat
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 73ca13a7ec5f
+- name: datamash_ops
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 562f3c677828
+- name: fastp
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - dbf9c561ef29
+- name: freebayes
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - ef2c525bd8cd
+- name: ivar_trim
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - c092052ed673
+- name: lofreq_filter
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 7dfca164d2e3
+- name: medaka_consensus
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - db25ec99c3ea
+- name: medaka_variant
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 0f5f4a208660
+- name: merge
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - debffd27642d
+- name: minimap2
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 8c6cd2650d1f
+- name: multiqc
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 5e33b465d8d5
+- name: nextclade
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 4f6349228462
+- name: qualimap_bamqc
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 19ece8afbaab
+- name: samtools_stats
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 145f6d74ff5e
+- name: samtools_view
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - bf328cec6a42
+- name: snp_dists
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 1be3e9c59601
+- name: snpeff_sars_cov_2
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 2a3a00c1fa0a
+- name: snpsift
+  owner: iuc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 0abc5513f795
+- name: subtract
+  owner: devteam
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 0427ca314f3d
+- name: text_processing
+  owner: bgruening
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: GenViData
+  revisions:
+  - 30b60202d990
+  - ddf54b12c295

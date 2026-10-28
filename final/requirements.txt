@@ -1,0 +1,5 @@
+# Python packages for the scripts in final/scripts (install into a virtual environment, see README.md)
+requests
+pyyaml
+planemo
+ephemeris

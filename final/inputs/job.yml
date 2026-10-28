@@ -1,0 +1,68 @@
+reference:
+  class: File
+  location: https://zenodo.org/record/4555735/files/NC_045512.2_reference.fasta?download=1
+  filetype: fasta
+irish_reads:
+  class: Collection
+  collection_type: list
+  elements:
+  - class: File
+    identifier: ERR7112279
+    location: https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR711/009/ERR7112279/ERR7112279.fastq.gz
+    filetype: fastqsanger.gz
+    hashes:
+    - hash_function: MD5
+      hash_value: 3dbd29bc69ed67195b649e5be8e9fc17
+irish_primers:
+  class: File
+  path: /home/gavinfarrell/PhD_Code/LS_Use_Case/final/workflow/primers/midnight_1200_v1.bed
+  filetype: bed
+irish_min_read_length: 250
+irish_max_read_length: 1500
+swedish_reads:
+  class: Collection
+  collection_type: list
+  elements:
+  - class: File
+    identifier: SRR27033646
+    location: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/046/SRR27033646/SRR27033646_1.fastq.gz
+    filetype: fastqsanger.gz
+    hashes:
+    - hash_function: MD5
+      hash_value: 3f257a75f60b628339958af630291e7d
+  - class: File
+    identifier: SRR27033647
+    location: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/047/SRR27033647/SRR27033647_1.fastq.gz
+    filetype: fastqsanger.gz
+    hashes:
+    - hash_function: MD5
+      hash_value: 6b807052e809dd7e9f31f29927316e5c
+  - class: File
+    identifier: SRR27033648
+    location: https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR270/048/SRR27033648/SRR27033648_1.fastq.gz
+    filetype: fastqsanger.gz
+    hashes:
+    - hash_function: MD5
+      hash_value: 49f0e558b7f5b6b1d9649459b3628549
+swedish_primers:
+  class: File
+  path: /home/gavinfarrell/PhD_Code/LS_Use_Case/final/workflow/primers/artic_v3.bed
+  filetype: bed
+swedish_min_read_length: 400
+swedish_max_read_length: 700
+swedish_consensus:
+  class: Collection
+  collection_type: list
+  elements:
+  - class: File
+    identifier: MZ846201
+    location: https://www.ebi.ac.uk/ena/browser/api/fasta/MZ846201
+    filetype: fasta
+  - class: File
+    identifier: MZ848129
+    location: https://www.ebi.ac.uk/ena/browser/api/fasta/MZ848129
+    filetype: fasta
+  - class: File
+    identifier: OP458823
+    location: https://www.ebi.ac.uk/ena/browser/api/fasta/OP458823
+    filetype: fasta

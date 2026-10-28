@@ -1,0 +1,184 @@
+class: GalaxyWorkflow
+label: "GenViData: SARS-CoV-2 Nanopore reads to lineage, variants and an Irish-Swedish comparison"
+doc: |
+  Runs one Irish sample of concern and Swedish samples through the same steps.
+  The Irish and Swedish reads come from different primer schemes, so each has its own branch
+  (same subworkflows, different primer file and read length filter).
+  1. Variation: the IWC workflow "COVID-19: variation analysis of ARTIC ONT data" (BY-COVID collection)
+     fastp, minimap2, ivar trim, medaka, lofreq filter, SnpEff -> annotated variants (VCF), QC reports
+  2. Consensus: the IWC workflow "COVID-19: consensus construction" -> one consensus sequence per sample
+  3. Join the Irish, Swedish and Swedish ENA consensus sequences in one FASTA file
+  4. Lineage and mutations: Nextclade
+  5. Distances: snp-dists on the Nextclade alignment
+  6. Variant tables: SnpSift Extract Fields on the annotated variants
+  Reads are fetched by Galaxy from ENA, using the URLs in the job file made by scripts/02_make_job.py.
+creator:
+  - class: Organization
+    name: ELIXIR Ireland
+
+inputs:
+  reference:
+    type: data
+    format: fasta
+    doc: SARS-CoV-2 reference genome NC_045512.2
+  irish_reads:
+    type: collection
+    collection_type: list
+    format: fastqsanger.gz
+    doc: Irish Nanopore reads, one element per ENA run accession
+  irish_primers:
+    type: data
+    format: bed
+    doc: Primer positions for the Irish reads
+  irish_min_read_length:
+    type: int
+  irish_max_read_length:
+    type: int
+  swedish_reads:
+    type: collection
+    collection_type: list
+    format: fastqsanger.gz
+    doc: Swedish Nanopore reads, one element per ENA run accession
+  swedish_primers:
+    type: data
+    format: bed
+    doc: Primer positions for the Swedish reads
+  swedish_min_read_length:
+    type: int
+  swedish_max_read_length:
+    type: int
+  swedish_consensus:
+    type: collection
+    collection_type: list
+    format: fasta
+    doc: Swedish consensus sequences from ENA, one element per sequence accession
+
+outputs:
+  irish_qc_report:
+    outputSource: irish_variation/preprocessing_and_mapping_reports
+  irish_annotated_variants:
+    outputSource: irish_variation/annotated_softfiltered_variants
+  irish_variant_table:
+    outputSource: irish_variant_table/output
+  irish_mapping_stats:
+    outputSource: irish_variation/mapped_reads_stats
+  irish_coverage_depth:
+    outputSource: irish_consensus/coverage_depth
+  irish_consensus:
+    outputSource: irish_consensus/multisample_consensus_fasta
+  swedish_qc_report:
+    outputSource: swedish_variation/preprocessing_and_mapping_reports
+  swedish_annotated_variants:
+    outputSource: swedish_variation/annotated_softfiltered_variants
+  swedish_variant_table:
+    outputSource: swedish_variant_table/output
+  swedish_mapping_stats:
+    outputSource: swedish_variation/mapped_reads_stats
+  swedish_coverage_depth:
+    outputSource: swedish_consensus_from_reads/coverage_depth
+  swedish_consensus:
+    outputSource: swedish_consensus_from_reads/multisample_consensus_fasta
+  all_sequences:
+    outputSource: join_sequences/out_file1
+  lineage_report:
+    outputSource: lineage/report_tsv
+  alignment:
+    outputSource: lineage/output_fasta
+  snp_distances:
+    outputSource: distances/output
+
+steps:
+  # ---------- Irish branch ----------
+  # 1. Variation analysis (unchanged IWC workflow)
+  irish_variation:
+    run:
+      "@import": iwc/ont-artic-variation.ga
+    in:
+      ONT-sequenced reads: irish_reads
+      Minimum read length: irish_min_read_length
+      Maximum read length: irish_max_read_length
+      NC_045512.2 FASTA sequence of SARS-CoV-2: reference
+      Primer binding sites info in BED format: irish_primers
+  # 2. Consensus construction (unchanged IWC workflow), with its default thresholds
+  irish_consensus:
+    run:
+      "@import": iwc/consensus-from-variation.ga
+    in:
+      Variant calls: irish_variation/annotated_softfiltered_variants
+      aligned reads data for depth calculation: irish_variation/primer_trimmed_realigned_filtered_mapped_reads
+      Reference genome: reference
+  # 6. One row per variant: position, change, allele frequency, depth, gene, effect and protein change
+  #    (SnpEff for SARS-CoV-2 writes its annotation in the EFF field)
+  irish_variant_table:
+    tool_id: toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_extractFields/5.4.0c+galaxy0
+    in:
+      input: irish_variation/annotated_softfiltered_variants
+    state:
+      extract: "CHROM POS REF ALT AF DP EFF[0].GENE EFF[0].EFFECT EFF[0].AA"
+      one_effect_per_line: false
+      separator: ","
+      empty_text: "."
+
+  # ---------- Swedish branch: the same steps ----------
+  swedish_variation:
+    run:
+      "@import": iwc/ont-artic-variation.ga
+    in:
+      ONT-sequenced reads: swedish_reads
+      Minimum read length: swedish_min_read_length
+      Maximum read length: swedish_max_read_length
+      NC_045512.2 FASTA sequence of SARS-CoV-2: reference
+      Primer binding sites info in BED format: swedish_primers
+  swedish_consensus_from_reads:
+    run:
+      "@import": iwc/consensus-from-variation.ga
+    in:
+      Variant calls: swedish_variation/annotated_softfiltered_variants
+      aligned reads data for depth calculation: swedish_variation/primer_trimmed_realigned_filtered_mapped_reads
+      Reference genome: reference
+  swedish_variant_table:
+    tool_id: toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_extractFields/5.4.0c+galaxy0
+    in:
+      input: swedish_variation/annotated_softfiltered_variants
+    state:
+      extract: "CHROM POS REF ALT AF DP EFF[0].GENE EFF[0].EFFECT EFF[0].AA"
+      one_effect_per_line: false
+      separator: ","
+      empty_text: "."
+
+  # ---------- Comparison ----------
+  # 3. Put the Swedish ENA consensus sequences in one file, then join all sequences
+  collapse_swedish_ena:
+    tool_id: toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0
+    in:
+      input_list: swedish_consensus
+    state:
+      one_header: false
+      filename:
+        add_name: false
+  join_sequences:
+    tool_id: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/9.11+galaxy0
+    in:
+      inputs:
+        source:
+          - irish_consensus/multisample_consensus_fasta
+          - swedish_consensus_from_reads/multisample_consensus_fasta
+          - collapse_swedish_ena/output
+
+  # 4. Lineage, clade, mutations and quality for every sequence
+  lineage:
+    tool_id: toolshed.g2.bx.psu.edu/repos/iuc/nextclade/nextclade/2.7.0+galaxy0
+    in:
+      input_fasta: join_sequences/out_file1
+    state:
+      organism: sars-cov-2
+      db:
+        source: download
+      outputs: [report_tsv, output_fasta]
+      include_header: true
+
+  # 5. How many nucleotide differences between each pair of sequences
+  distances:
+    tool_id: toolshed.g2.bx.psu.edu/repos/iuc/snp_dists/snp_dists/1.2.0+galaxy0
+    in:
+      input: lineage/output_fasta

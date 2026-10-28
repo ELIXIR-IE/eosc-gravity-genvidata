@@ -1,0 +1,27 @@
+# Inputs for the GenViData workflow. Edit these, then run the scripts in order (see README.md).
+
+# ---------- Irish sample of concern ----------
+# An ENA run accession: Oxford Nanopore reads of SARS-CoV-2 amplicons
+irish_run: ERR7112279
+# Primer scheme, checked from the reads (see workflow/primers/SOURCES.md):
+# the ENA record says ARTIC v3, but the reads match the Midnight 1200 bp scheme
+irish_primers: workflow/primers/midnight_1200_v1.bed
+# Read length filter for 1200 bp amplicons
+irish_min_read_length: 250
+irish_max_read_length: 1500
+
+# ---------- Swedish raw reads, run through the same steps ----------
+swedish_runs_from: "2021-06-01"
+swedish_runs_to: "2021-09-30"
+swedish_runs_max: 3
+# Primer scheme, checked from the reads: ARTIC v3
+swedish_primers: workflow/primers/artic_v3.bed
+# Read length filter for 400 bp amplicons (the ARTIC defaults used by the IWC workflow)
+swedish_min_read_length: 400
+swedish_max_read_length: 700
+
+# ---------- Swedish consensus sequences already in ENA, used as extra context ----------
+# (few Swedish consensus sequences from mid-2021 are in ENA: 3 between June and December 2021)
+swedish_consensus_from: "2021-06-01"
+swedish_consensus_to: "2021-12-31"
+swedish_consensus_max: 10
